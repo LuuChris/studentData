@@ -1,0 +1,35 @@
+import java.util.*;
+
+public class StudentMain {
+	
+	public static String[][] ar1=StudentsData1.ar1;
+	public static String[][] ar2=StudentsData2.ar2;
+	public static String[][] ar=new String[ar1.length+ar2.length][ar1[0].length];
+	
+	
+	public static void main(String[] args) {
+		combine();
+		//printData();
+		//algorithm1();
+		
+	}
+	
+	public static void combine() {
+		System.arraycopy(ar1, 0, ar, 0, ar1.length);
+		System.arraycopy(ar1, 0, ar, ar1.length, ar2.length);
+	}
+	
+	public static void printData() {
+		for(int i=0; i<ar.length;i++) {
+			for(int j=0; j<ar[0].length;j++) {
+				System.out.print(ar[i][j]+" ");
+			}
+			System.out.println();
+		}
+	}
+	
+	public static void algorithm1() {
+		
+	}
+
+}
